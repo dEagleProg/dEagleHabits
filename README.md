@@ -24,7 +24,7 @@ A habit-tracking application built with **Nuxt 3**, **Drizzle ORM**, and **SQLit
 
 ### Demo
 
-Check out the live demo: [https://habit.nuxt.dev](https://habit.nuxt.dev)
+Check out the live demo: [https://deaglehabits.nuxt.dev/](https://deaglehabits.nuxt.dev/)
 
 ### License
 
