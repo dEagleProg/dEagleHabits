@@ -9,19 +9,19 @@ useHead({
 });
 
 useSeoMeta({
-  title: 'Habit',
+  title: 'dEagle Habits',
   description: 'A minimalistic habit tracker application to track and manage your daily habits with ease',
-  ogTitle: 'Habit',
+  ogTitle: 'dEagle Habits',
   ogDescription: 'A minimalistic habit tracker application to track and manage your daily habits with ease',
   viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
   twitterCard: 'summary_large_image',
   ogImage: '/social-card.png',
   twitterImage: '/social-card.png',
   ogType: 'website',
-  ogUrl: 'https://habit.nuxt.dev',
-  ogSiteName: 'Habit',
-  twitterCreator: '@ZHatlen',
-  twitterSite: '@ZHatlen',
+  ogUrl: 'https://deaglehabits.nuxt.dev/',
+  ogSiteName: 'dEagle Habits',
+  twitterCreator: '',
+  twitterSite: '',
   robots: 'index, follow',
   keywords: 'habit, tracker, daily, habits, management, tool, minimalistic',
 });
