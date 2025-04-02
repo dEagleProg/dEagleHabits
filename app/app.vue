@@ -23,7 +23,7 @@ useSeoMeta({
   twitterCreator: '',
   twitterSite: '',
   robots: 'index, follow',
-  keywords: 'habit, tracker, daily, habits, management, tool, minimalistic',
+  keywords: 'habit, habits, tracker, daily, habits, management, tool, minimalistic',
 });
 </script>
 
