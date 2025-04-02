@@ -6,9 +6,9 @@ const currentYear = format(new Date(), 'yyyy');
 
 <template>
   <div class="mt-2 flex items-center justify-center gap-1 text-xs text-neutral-400">
-    <a class="font-semibold transition hover:text-white" href="dEagle" target="_blank">Habit v{{ config.public.version }}</a>
+    <a class="font-semibold transition hover:text-white" href="https://github.com/dEagleProg/dEagleHabits" target="_blank">dEagle Habits v{{ config.public.version }}</a>
     - by
-    <a class="font-semibold transition hover:text-white" href="https://github.com/zackha" target="_blank">dEagle</a>
+    <a class="font-semibold transition hover:text-white" href="https://github.com/dEagleProg" target="_blank">dEagle</a>
     {{ currentYear }}
   </div>
 </template>
