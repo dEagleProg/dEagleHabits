@@ -1,14 +1,5 @@
 <script setup lang="ts">
 const { user } = useUserSession();
-const { signIn } = useAuth();
-
-const loginWithGoogle = async () => {
-  try {
-    await signIn('google', { callbackUrl: '/' })
-  } catch (error) {
-    console.error('Ошибка при авторизации через Google:', error)
-  }
-}
 
 watchEffect(async () => {
   if (user.value) {
@@ -29,14 +20,9 @@ watchEffect(async () => {
         <span class="text-green-400">daily habits</span>
       </div>
     </div>
-    <div class="flex flex-col gap-3">
-      <a href="/api/auth/github" class="button bg-white/20 px-2.5 py-2 hover:bg-white/30">
-        <UIcon name="i-simple-icons-github" class="h-5 w-5" />
-        Continue with GitHub
-      </a>
-      <button @click="loginWithGoogle" class="button bg-white/20 px-2.5 py-2 hover:bg-white/30">
-        <GoogleAuth />
-      </button>
-    </div>
+    <a href="/api/auth/github" class="button bg-white/20 px-2.5 py-2 hover:bg-white/30">
+      <UIcon name="i-simple-icons-github" class="h-5 w-5" />
+      Continue with GitHub
+    </a>
   </Card>
 </template>
