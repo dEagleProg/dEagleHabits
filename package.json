@@ -39,9 +39,11 @@
   "dependencies": {
     "@nuxt/ui": "2.21.0",
     "@nuxthub/core": "0.8.11",
+    "@nuxtjs/google-fonts": "^3.2.0",
     "@pinia/colada": "^0.13.8",
     "@pinia/colada-nuxt": "0.0.4",
     "@pinia/nuxt": "^0.9.0",
+    "@sidebase/nuxt-auth": "^0.10.1",
     "canvas-confetti": "^1.9.3",
     "date-fns": "^4.1.0",
     "drizzle-kit": "^0.30.5",

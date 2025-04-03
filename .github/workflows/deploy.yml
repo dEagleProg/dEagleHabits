@@ -1,0 +1,41 @@
+name: Deploy to Nuxt Hosting
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+          
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+          
+      - name: Install dependencies
+        run: pnpm install
+        
+      - name: Build
+        run: pnpm run build
+        env:
+          NUXT_PUBLIC_SITE_URL: https://deaglehabits.nuxt.dev
+          NUXT_AUTH_ORIGIN: https://deaglehabits.nuxt.dev
+          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+          NUXT_SESSION_PASSWORD: ${{ secrets.NUXT_SESSION_PASSWORD }}
+          
+      - name: Deploy to Nuxt Hosting
+        uses: nuxt/hosting@v1
+        with:
+          project-name: deaglehabits
+          token: ${{ secrets.NUXT_TOKEN }} 
